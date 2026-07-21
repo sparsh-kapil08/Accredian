@@ -43,7 +43,7 @@ The primary approach was to understand the page, its content, and the available 
 The backend was designed completely by me to store enquiry form data securely and efficiently using Express and Node.js, with Supabase/Postgres as the database layer.
 
 ## AI Usage Explanation
-AI was used to help structure the website content, improve the overall layout and UI flow, The goal was to speed up development while keeping the project aligned with the original Website.
+Antigravity was used to help structure the website content, improve the overall layout and UI flow, The goal was to speed up development while keeping the project aligned with the original Website.
 
 ## Database Schema (Supabase)
 ```sql

@@ -4,7 +4,10 @@
   "description": "Accredian Enterprise Website Redesign",
   "main": "index.html",
   "scripts": {
-    "start": "npx serve -l 3000 ."
+    "dev": "vite --host 0.0.0.0 --port 4000",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "start": "npm run dev"
   },
   "keywords": [
     "accredian",
@@ -13,5 +16,15 @@
     "upskilling"
   ],
   "author": "Accredian Enterprise Team",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "pg": "^8.22.0",
+    "pool": "^0.4.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
+  }
 }

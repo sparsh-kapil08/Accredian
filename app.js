@@ -3,6 +3,8 @@
  * Vanilla ES6 JavaScript
  */
 
+const backend = (import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000').replace(/\/$/, '');
+
 // FAQ Data Source
 const faqsData = [
   {
@@ -194,17 +196,18 @@ function closeEnquireModal() {
 }
 
 // Form submit handler
-function handleEnquireSubmit(e) {
+async function handleEnquireSubmit(e) {
   e.preventDefault();
   
   const nameInput = document.getElementById('form-name');
   const emailInput = document.getElementById('form-email');
   const phoneInput = document.getElementById('form-phone');
+  const domainInput =document.getElementById('form-domain');
 
   const name = nameInput ? nameInput.value : 'Applicant';
   const email = emailInput ? emailInput.value : '';
   const phone = phoneInput ? phoneInput.value : '';
-
+  const domain=domainInput? domainInput.value : "";
   if (!name || !email || !phone) {
     alert('Please fill out all required fields.');
     return;
@@ -216,8 +219,27 @@ function handleEnquireSubmit(e) {
 
   if (userNameElem) userNameElem.innerText = name;
   if (refNumElem) refNumElem.innerText = `#ACC-ENT-${Math.floor(10000 + Math.random() * 90000)}`;
-
+  const res = await fetch(`${backend}/info`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      name,
+      email,
+      phone,
+      ticket: refNumElem ? refNumElem.innerText : '',
+      domain: domain
+    })
+  });
+  console.log(res);
   // Toggle modal screens
   document.getElementById('modal-form-screen').classList.add('hidden');
   document.getElementById('modal-success-screen').classList.remove('hidden');
 }
+
+window.openEnquireModal = openEnquireModal;
+window.closeEnquireModal = closeEnquireModal;
+window.toggleMobileMenu = toggleMobileMenu;
+window.toggleFaq = toggleFaq;
+window.handleEnquireSubmit = handleEnquireSubmit;

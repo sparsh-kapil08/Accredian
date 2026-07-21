@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const pool = require("./db.js");
 const app = express();
-const mode="developmen";
+const mode="development";
 
 app.use(express.json());
 app.use(cors({ origin: "*" }));

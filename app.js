@@ -219,7 +219,8 @@ async function handleEnquireSubmit(e) {
 
   if (userNameElem) userNameElem.innerText = name;
   if (refNumElem) refNumElem.innerText = `#ACC-ENT-${Math.floor(10000 + Math.random() * 90000)}`;
-  const res = await fetch(`${backend}/info`, {
+  try{
+    const res = await fetch(`${backend}/info`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -233,9 +234,16 @@ async function handleEnquireSubmit(e) {
     })
   });
   console.log(res);
-  // Toggle modal screens
-  document.getElementById('modal-form-screen').classList.add('hidden');
-  document.getElementById('modal-success-screen').classList.remove('hidden');
+  if(res.status==200){
+    document.getElementById('modal-form-screen').classList.add('hidden');
+    document.getElementById('modal-success-screen').classList.remove('hidden');
+  }else{
+    alert("There was an error in Backend. Please try again later.");
+  }
+}  catch(err){
+    console.error(err);
+    alert("There was an error submitting your enquiry. Please try again later.");
+  }
 }
 
 window.openEnquireModal = openEnquireModal;

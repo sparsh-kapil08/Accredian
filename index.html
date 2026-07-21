@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accredian Enterprise | Next-Gen Expertise for Your Enterprise</title>
+    <meta name="description" content="Empower enterprise teams with tailored corporate learning frameworks, Gen-AI mastery, leadership elevation, and practical domain training from Accredian Enterprise.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef6ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            500: '#0066ff',
+                            600: '#0052cc',
+                            700: '#003d99',
+                            800: '#002966',
+                            900: '#0b172a',
+                            950: '#060d1b'
+                        },
+                        accent: {
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#00d2ff',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Sleek Top Info Bar -->
+    <div class="bg-brand-950 text-slate-400 text-xs py-2.5 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-5 text-xs text-slate-300">
+                <a href="mailto:enterprise@accredian.com" class="flex items-center gap-2 hover:text-white transition-colors">
+                    <svg class="w-4 h-4 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    <span class="font-medium">enterprise@accredian.com</span>
+                </a>
+                <span class="text-slate-800">|</span>
+                <div class="flex items-center gap-2 text-slate-400">
+                    <svg class="w-4 h-4 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <span>Sector 18, Gurugram, Haryana</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 text-xs">
+                <span class="text-slate-400 font-medium">Transform Your Enterprise Workforce</span>
+                <button onclick="openEnquireModal()" class="text-accent-400 font-bold hover:text-white transition-colors inline-flex items-center gap-1">
+                    <span>Enquire Now</span>
+                    <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="main-header" class="sticky top-0 z-40 bg-brand-950/95 backdrop-blur-md transition-all duration-300 py-4 border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-md bg-brand-500 text-white font-bold text-lg flex items-center justify-center shadow-md">
+                    A
+                </div>
+                <div>
+                    <div class="text-lg font-bold text-white tracking-tight leading-none flex items-center gap-2">
+                        ACCREDIAN
+                        <span class="text-[10px] uppercase tracking-wider px-2 py-0.5 rounded bg-brand-500/20 text-accent-300 border border-brand-500/30 font-semibold">ENTERPRISE</span>
+                    </div>
+                    <div class="text-[11px] text-slate-400 mt-0.5">A Brand of FullStack Education</div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden xl:flex items-center space-x-6 text-xs font-semibold uppercase tracking-wider text-slate-300">
+                <a href="#home" class="hover:text-white transition-colors">Home</a>
+                <a href="#stats" class="hover:text-white transition-colors">Stats</a>
+                <a href="#clients" class="hover:text-white transition-colors">Clients</a>
+                <a href="#edge" class="hover:text-white transition-colors">Accredian Edge</a>
+                <a href="#domains" class="hover:text-white transition-colors">Domains</a>
+                <a href="#cat" class="hover:text-white transition-colors">CAT Framework</a>
+                <a href="#how-it-works" class="hover:text-white transition-colors">Process</a>
+                <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                <a href="#faq" class="hover:text-white transition-colors">FAQs</a>
+            </nav>
+
+            <!-- CTA Actions -->
+            <div class="hidden xl:flex items-center gap-3">
+                <button onclick="openEnquireModal()" class="px-5 py-2.5 rounded-md bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs uppercase tracking-wider transition-all sleek-btn flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                    <span>ENQUIRE NOW</span>
+                </button>
+            </div>
+
+            <!-- Mobile Drawer Button -->
+            <div class="xl:hidden flex items-center gap-2">
+                <button id="mobile-menu-btn" class="p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none">
+                    <svg id="menu-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Drawer -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-brand-950 border-b border-slate-800 px-4 pt-3 pb-6 space-y-2.5 mt-2">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">Home</a>
+            <a href="#stats" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">Stats</a>
+            <a href="#clients" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">Clients</a>
+            <a href="#edge" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">Accredian Edge</a>
+            <a href="#domains" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">Domain Expertise</a>
+            <a href="#cat" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">CAT Framework</a>
+            <a href="#how-it-works" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">Process</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">Contact Us</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:bg-slate-800">FAQs</a>
+            <div class="pt-3 border-t border-slate-800">
+                <button onclick="toggleMobileMenu(); openEnquireModal()" class="w-full py-3 rounded-md bg-brand-500 text-white font-bold text-center">
+                    ENQUIRE NOW
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section id="home" class="gradient-dark-bg text-white py-24 border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="max-w-3xl mx-auto text-center space-y-6">
+                    
+                    <!-- Value Badges -->
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-accent-300 border border-brand-500/30">
+                            <svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Tailored Solutions</span>
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-accent-300 border border-brand-500/30">
+                            <svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            <span>Industry Insights</span>
+                        </span>
+                        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-xs font-semibold bg-brand-500/10 text-accent-300 border border-brand-500/30">
+                            <svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            <span>Expert Guidance</span>
+                        </span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+                        Next-Gen Expertise for Your Enterprise
+                    </h1>
+
+                    <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl mx-auto">
+                        Cultivate high-performance teams through expert learning, customized domain training, and practical Gen-AI capabilities.
+                    </p>
+
+                    <!-- Primary Action Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button onclick="openEnquireModal()" class="w-full sm:w-auto px-8 py-3.5 rounded-md bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs uppercase tracking-wider transition-all sleek-btn flex items-center justify-center gap-2">
+                            <span>ENQUIRE NOW</span>
+                            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                        
+                        <a href="#domains" class="w-full sm:w-auto px-8 py-3.5 rounded-md bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold text-xs uppercase tracking-wider text-center transition-all">
+                            Explore Programs
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Track Record / Stats Section -->
+        <section id="stats" class="py-20 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Our Track Record</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        The Numbers Behind Our Success
+                    </h2>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-3 gap-8">
+                    <!-- Stat Card 1 -->
+                    <div class="p-8 classy-card text-center space-y-3">
+                        <div class="w-12 h-12 rounded-md bg-slate-100 text-brand-600 flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <div class="text-4xl font-extrabold text-slate-900">10K+</div>
+                        <h3 class="font-bold text-slate-800 text-sm">Professionals Trained</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Trained for exceptional career success across enterprise sectors.</p>
+                    </div>
+
+                    <!-- Stat Card 2 -->
+                    <div class="p-8 classy-card text-center space-y-3">
+                        <div class="w-12 h-12 rounded-md bg-slate-100 text-brand-600 flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div class="text-4xl font-extrabold text-slate-900">200+</div>
+                        <h3 class="font-bold text-slate-800 text-sm">Sessions Delivered</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Delivered with unmatched learning excellence and practical focus.</p>
+                    </div>
+
+                    <!-- Stat Card 3 -->
+                    <div class="p-8 classy-card text-center space-y-3">
+                        <div class="w-12 h-12 rounded-md bg-slate-100 text-brand-600 flex items-center justify-center mx-auto">
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                        </div>
+                        <div class="text-4xl font-extrabold text-slate-900">5K+</div>
+                        <h3 class="font-bold text-slate-800 text-sm">Active Learners</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Engaged in dynamic, interactive cohorts continuously advancing capabilities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proven Partnerships / Clients Section -->
+        <section id="clients" class="py-16 bg-brand-950 text-white border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent-400">Our Proven Partnerships</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">
+                        Successful Collaborations With the Industry’s Best
+                    </h2>
+                </div>
+
+                <div class="overflow-hidden relative marquee-container pt-4">
+                    <div class="animate-marquee items-center space-x-12">
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Microsoft</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Amazon AWS</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Google Cloud</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Deloitte</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">McKinsey & Company</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">IBM Enterprise</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">HDFC Bank</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Walmart Global Tech</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Accenture</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Tata Consultancy Services</span>
+
+                        <!-- Repeat for seamless marquee loop -->
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Microsoft</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Amazon AWS</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Google Cloud</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">Deloitte</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">McKinsey & Company</span>
+                        <span class="text-slate-400 font-semibold text-lg hover:text-white transition-colors cursor-pointer whitespace-nowrap">IBM Enterprise</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accredian Edge Section -->
+        <section id="edge" class="py-20 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">The Accredian Edge</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        Key Aspects of Our Strategic Training
+                    </h2>
+                </div>
+
+                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-8 h-8 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center font-bold text-xs">
+                            01
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Precision Customization</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Curriculums engineered specifically for your domain goals, corporate tech stack, and strategic targets.</p>
+                    </div>
+
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-8 h-8 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center font-bold text-xs">
+                            02
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Live Expert Guidance</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Interactive live cohorts taught by global faculty and seasoned industry practitioners.</p>
+                    </div>
+
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-8 h-8 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center font-bold text-xs">
+                            03
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Practical Capstones</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Hands-on real-world business challenges and capstone applications for immediate impact.</p>
+                    </div>
+
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-8 h-8 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center font-bold text-xs">
+                            04
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Outcome Analytics</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Detailed progress dashboards mapping skills advancement and performance uplift.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domain Expertise Section -->
+        <section id="domains" class="py-20 bg-brand-950 text-white border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent-400">Our Domain Expertise</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                        Specialized Programs Designed to Fuel Innovation
+                    </h2>
+                </div>
+
+                <!-- 7 Domain Grid Cards -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Domain 1 -->
+                    <div class="p-6 classy-card-dark space-y-4 group flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-accent-300 transition-colors">Product & Innovation Hub</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Master modern product management, user-centric innovation, and agile execution frameworks.</p>
+                            <ul class="space-y-1 pt-2 text-[11px] text-slate-300">
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Product Strategy & Roadmap</li>
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Agile & Scrum Frameworks</li>
+                            </ul>
+                        </div>
+                        <button onclick="openEnquireModal('Product & Innovation Hub')" class="text-xs font-semibold text-brand-500 hover:text-white inline-flex items-center gap-1 pt-3 border-t border-slate-800">
+                            <span>Enquire Program</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Domain 2 -->
+                    <div class="p-6 classy-card-dark space-y-4 group flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-accent-300 transition-colors">Gen-AI Mastery</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Deploy cutting-edge Generative AI models, autonomous agents, and enterprise LLM workflows.</p>
+                            <ul class="space-y-1 pt-2 text-[11px] text-slate-300">
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Autonomous AI Agents</li>
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> LLM Fine-Tuning & RAG</li>
+                            </ul>
+                        </div>
+                        <button onclick="openEnquireModal('Gen-AI Mastery')" class="text-xs font-semibold text-brand-500 hover:text-white inline-flex items-center gap-1 pt-3 border-t border-slate-800">
+                            <span>Enquire Program</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Domain 3 -->
+                    <div class="p-6 classy-card-dark space-y-4 group flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-accent-300 transition-colors">Leadership Elevation</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Empower executive and mid-career managers to make strategic, data-driven leadership decisions.</p>
+                            <ul class="space-y-1 pt-2 text-[11px] text-slate-300">
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Strategic Decision Making</li>
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Executive Communication</li>
+                            </ul>
+                        </div>
+                        <button onclick="openEnquireModal('Leadership Elevation')" class="text-xs font-semibold text-brand-500 hover:text-white inline-flex items-center gap-1 pt-3 border-t border-slate-800">
+                            <span>Enquire Program</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Domain 4 -->
+                    <div class="p-6 classy-card-dark space-y-4 group flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-accent-300 transition-colors">Tech & Data Insights</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Advanced analytics, big data engineering, machine learning, and strategic business intelligence.</p>
+                            <ul class="space-y-1 pt-2 text-[11px] text-slate-300">
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Predictive Analytics & ML</li>
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Enterprise Data Engineering</li>
+                            </ul>
+                        </div>
+                        <button onclick="openEnquireModal('Tech & Data Insights')" class="text-xs font-semibold text-brand-500 hover:text-white inline-flex items-center gap-1 pt-3 border-t border-slate-800">
+                            <span>Enquire Program</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Domain 5 -->
+                    <div class="p-6 classy-card-dark space-y-4 group flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-accent-300 transition-colors">Operations Excellence</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Optimize supply chain, process automation, and operational performance efficiency.</p>
+                            <ul class="space-y-1 pt-2 text-[11px] text-slate-300">
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Process Optimization & RPA</li>
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Supply Chain Intelligence</li>
+                            </ul>
+                        </div>
+                        <button onclick="openEnquireModal('Operations Excellence')" class="text-xs font-semibold text-brand-500 hover:text-white inline-flex items-center gap-1 pt-3 border-t border-slate-800">
+                            <span>Enquire Program</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Domain 6 -->
+                    <div class="p-6 classy-card-dark space-y-4 group flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-accent-300 transition-colors">Digital Enterprise</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Drive enterprise-wide digital transformation, cloud architecture, and organizational change.</p>
+                            <ul class="space-y-1 pt-2 text-[11px] text-slate-300">
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Cloud Architecture</li>
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Digital Transformation</li>
+                            </ul>
+                        </div>
+                        <button onclick="openEnquireModal('Digital Enterprise')" class="text-xs font-semibold text-brand-500 hover:text-white inline-flex items-center gap-1 pt-3 border-t border-slate-800">
+                            <span>Enquire Program</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+
+                    <!-- Domain 7 -->
+                    <div class="p-6 classy-card-dark space-y-4 group flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white group-hover:text-accent-300 transition-colors">Fintech Innovation Lab</h3>
+                            <p class="text-xs text-slate-400 leading-relaxed">Financial technologies, algorithmic modeling, blockchain applications, and risk analytics.</p>
+                            <ul class="space-y-1 pt-2 text-[11px] text-slate-300">
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Algorithmic Risk Modeling</li>
+                                <li class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Blockchain & Payment Tech</li>
+                            </ul>
+                        </div>
+                        <button onclick="openEnquireModal('Fintech Innovation Lab')" class="text-xs font-semibold text-brand-500 hover:text-white inline-flex items-center gap-1 pt-3 border-t border-slate-800">
+                            <span>Enquire Program</span>
+                            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tailored Course Segmentation Section -->
+        <section class="py-20 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Tailored Course Segmentation</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        Explore Custom-fit Courses Designed for Every Focus
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Segment 1 -->
+                    <div class="p-6 classy-card space-y-4">
+                        <div class="font-bold text-xs text-brand-600 uppercase tracking-wider">Program Specific</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Certificate</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Executive</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">PG Certificate</span>
+                        </div>
+                    </div>
+
+                    <!-- Segment 2 -->
+                    <div class="p-6 classy-card space-y-4">
+                        <div class="font-bold text-xs text-brand-600 uppercase tracking-wider">Industry Specific</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">IT</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Healthcare</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Retail</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Finance</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Education</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Manufacturing</span>
+                        </div>
+                    </div>
+
+                    <!-- Segment 3 -->
+                    <div class="p-6 classy-card space-y-4">
+                        <div class="font-bold text-xs text-brand-600 uppercase tracking-wider">Topic Specific</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Machine Learning</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Design</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Analytics</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Cybersecurity</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Cloud</span>
+                        </div>
+                    </div>
+
+                    <!-- Segment 4 -->
+                    <div class="p-6 classy-card space-y-4">
+                        <div class="font-bold text-xs text-brand-600 uppercase tracking-wider">Level Specific</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Senior Leadership</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Mid-Career</span>
+                            <span class="px-3 py-1 rounded bg-slate-100 text-slate-700 text-xs font-medium border border-slate-200">Freshers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Who Should Join Section -->
+        <section class="py-20 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Who Should Join?</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        Strategic Skill Enhancement
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Tech Professionals -->
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-10 h-10 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Tech Professionals</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Enhance technical expertise, embrace modern tools, and drive engineering innovation.</p>
+                    </div>
+
+                    <!-- Non-Tech Professionals -->
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-10 h-10 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Non-Tech Professionals</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Adapt digitally and collaborate seamlessly in technology-driven corporate environments.</p>
+                    </div>
+
+                    <!-- Emerging Professionals -->
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-10 h-10 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Emerging Professionals</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Develop high-demand industry skills for rapid and sustainable career progression.</p>
+                    </div>
+
+                    <!-- Senior Professionals -->
+                    <div class="p-6 classy-card space-y-3">
+                        <div class="w-10 h-10 rounded bg-brand-500/10 text-brand-600 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base">Senior Professionals</h3>
+                        <p class="text-xs text-slate-600 leading-relaxed">Strengthen executive leadership, enhance governance, and lead strategic change.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAT Framework Section -->
+        <section id="cat" class="py-20 bg-brand-950 text-white border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent-400">The CAT Framework</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                        Our Proven Approach to Learning Excellence
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="p-8 classy-card-dark space-y-4">
+                        <div class="w-10 h-10 rounded bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-xl">
+                            C
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Customization</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Tailoring program scope, datasets, case studies, and live cohort schedules specifically to align with company targets.</p>
+                    </div>
+
+                    <div class="p-8 classy-card-dark space-y-4">
+                        <div class="w-10 h-10 rounded bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-xl">
+                            A
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Application & Acceleration</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Hands-on capstone execution, live mentorship, and practical problem solving to accelerate real-world skill deployment.</p>
+                    </div>
+
+                    <div class="p-8 classy-card-dark space-y-4">
+                        <div class="w-10 h-10 rounded bg-brand-500/20 text-brand-500 flex items-center justify-center font-bold text-xl">
+                            T
+                        </div>
+                        <h3 class="text-lg font-bold text-white">Transformation</h3>
+                        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">Creating sustainable long-term business capability uplift and measurable enterprise output metrics across departments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="py-20 bg-white border-b border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Structured Process</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        How We Deliver Results That Matter?
+                    </h2>
+                    <p class="text-slate-600 text-sm">A Structured Three-Step Approach to Enterprise Skill Development</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Step 1 -->
+                    <div class="p-8 classy-card space-y-4 relative">
+                        <div class="w-10 h-10 rounded bg-brand-600 text-white font-bold text-base flex items-center justify-center">
+                            1
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Skill Gap Analysis</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Comprehensive evaluation of current team capabilities to pinpoint specific skill gaps and developmental requirements.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="p-8 classy-card space-y-4 relative">
+                        <div class="w-10 h-10 rounded bg-brand-600 text-white font-bold text-base flex items-center justify-center">
+                            2
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Customized Training Plan</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Designing a tailored learning roadmap with customized case studies addressing organizational strategic goals.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="p-8 classy-card space-y-4 relative">
+                        <div class="w-10 h-10 rounded bg-brand-600 text-white font-bold text-base flex items-center justify-center">
+                            3
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-900">Flexible Program Delivery</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">Delivering live interactive cohorts and ongoing post-training evaluations for continuous growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dedicated Contact Us Section -->
+        <section id="contact" class="py-20 bg-brand-950 text-white border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent-400">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                        Contact Accredian Enterprise
+                    </h2>
+                    <p class="text-slate-400 text-sm">Have questions or ready to launch custom corporate training? Our team is here to assist you.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Email Card -->
+                    <div class="p-8 classy-card-dark space-y-4 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Email Us</h3>
+                                <p class="text-xs text-slate-400 mt-1">Direct inquiries & enterprise support</p>
+                            </div>
+                            <a href="mailto:enterprise@accredian.com" class="text-sm font-bold text-accent-300 hover:text-white transition-colors block">
+                                enterprise@accredian.com
+                            </a>
+                        </div>
+                        <div class="pt-4 border-t border-slate-800 text-[11px] text-slate-400">
+                            Response time: Within 24 business hours
+                        </div>
+                    </div>
+
+                    <!-- Office Address Card -->
+                    <div class="p-8 classy-card-dark space-y-4 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-10 h-10 rounded bg-brand-500/10 text-accent-400 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-base font-bold text-white">Office Address</h3>
+                                <p class="text-xs text-slate-400 mt-1">Accredian Enterprise Headquarters</p>
+                            </div>
+                            <address class="not-italic text-xs text-slate-300 leading-relaxed">
+                                4th Floor, 250, Phase IV, Udyog Vihar,<br>
+                                Sector 18, Gurugram, Haryana
+                            </address>
+                        </div>
+                        <div class="pt-4 border-t border-slate-800 text-[11px] text-slate-400">
+                            Corporate Office India
+                        </div>
+                    </div>
+
+                    <!-- Quick Enquire Card -->
+                    <div class="p-8 classy-card-dark bg-slate-900 border-brand-500/30 space-y-4 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div class="w-10 h-10 rounded bg-brand-500/20 text-accent-300 flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                            </div>
+                            <h3 class="text-base font-bold text-white">Schedule a Meeting</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                Connect with an Enterprise Advisor for a personalized consultation.
+                            </p>
+                        </div>
+                        <button onclick="openEnquireModal()" class="w-full py-3 rounded-md bg-brand-500 hover:bg-brand-600 text-white font-bold text-xs uppercase tracking-wider text-center transition-all sleek-btn">
+                            REQUEST CONSULTATION
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 bg-slate-50 border-b border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="text-center space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-600">Have Questions?</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                        Frequently Asked Questions
+                    </h2>
+                </div>
+
+                <!-- FAQ Category Tabs -->
+                <div class="flex justify-center gap-2 overflow-x-auto pb-2" id="faq-category-buttons">
+                    <button onclick="filterFaqs('All')" class="faq-tab-btn px-4 py-2 rounded-md text-xs font-bold bg-brand-600 text-white transition-all" data-category="All">All</button>
+                    <button onclick="filterFaqs('About the Course')" class="faq-tab-btn px-4 py-2 rounded-md text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all" data-category="About the Course">About the Course</button>
+                    <button onclick="filterFaqs('About the Delivery')" class="faq-tab-btn px-4 py-2 rounded-md text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all" data-category="About the Delivery">About the Delivery</button>
+                    <button onclick="filterFaqs('Miscellaneous')" class="faq-tab-btn px-4 py-2 rounded-md text-xs font-bold bg-white text-slate-700 border border-slate-200 hover:bg-slate-100 transition-all" data-category="Miscellaneous">Miscellaneous</button>
+                </div>
+
+                <div class="space-y-3" id="faq-list-container">
+                    <!-- FAQ Items rendered by js/app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 bg-brand-950 text-white border-b border-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+                <div class="text-center max-w-3xl mx-auto space-y-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-accent-400">Testimonials from Our Partners</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                        What Our Enterprise Clients Are Saying
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="p-8 classy-card-dark space-y-4">
+                        <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
+                            "We would like to express our gratitude to Accredian for their seamless delivery of domain customized training programs. Their faculty and structured CAT framework helped upskill our teams efficiently."
+                        </p>
+                        <div>
+                            <div class="font-bold text-white text-xs sm:text-sm">Director of Learning & Development</div>
+                            <div class="text-[11px] text-accent-400">Global Financial Institution</div>
+                        </div>
+                    </div>
+
+                    <div class="p-8 classy-card-dark space-y-4">
+                        <p class="text-xs sm:text-sm text-slate-300 italic leading-relaxed">
+                            "Accredian's tailored Generative AI and Tech Insights modules gave our engineers immediate practical capabilities. The program delivery was flexible and perfectly aligned with our tech stack."
+                        </p>
+                        <div>
+                            <div class="font-bold text-white text-xs sm:text-sm">VP of Engineering</div>
+                            <div class="text-[11px] text-accent-400">Enterprise Cloud Services</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enquire Banner CTA Section -->
+        <section class="py-16 bg-brand-600 text-white text-center">
+            <div class="max-w-4xl mx-auto px-4 space-y-6">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">
+                    Ready to Transform Your Enterprise Workforce?
+                </h2>
+                <p class="text-slate-100 text-sm max-w-2xl mx-auto leading-relaxed">
+                    Get in touch with our enterprise experts to perform a skill gap analysis and receive a custom-tailored upskilling roadmap.
+                </p>
+                <button onclick="openEnquireModal()" class="px-8 py-3.5 rounded-md bg-white text-brand-700 font-bold text-xs uppercase tracking-wider hover:bg-slate-100 transition-all inline-flex items-center gap-2 sleek-btn">
+                    <span>ENQUIRE NOW</span>
+                    <svg class="w-4 h-4 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Multi-Column Enterprise Footer -->
+    <footer class="bg-brand-950 text-slate-400 text-xs border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <!-- Column 1: Brand & Bio -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded bg-brand-500 text-white font-bold flex items-center justify-center text-base">A</div>
+                        <div>
+                            <span class="text-base font-bold text-white">ACCREDIAN</span>
+                            <span class="text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded bg-brand-500/20 text-accent-300 border border-brand-500/30 font-semibold ml-1">ENTERPRISE</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Accredian Enterprise empowers global corporate workforces through tailored learning frameworks, Gen-AI capabilities, leadership elevation, and practical capstone execution.
+                    </p>
+                    <div class="text-[11px] text-slate-500 pt-1">
+                        A Brand of FullStack Education Pvt Ltd.
+                    </div>
+                </div>
+
+                <!-- Column 2: Domain Programs Links -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider">Enterprise Domains</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#domains" class="hover:text-white transition-colors">Gen-AI Mastery</a></li>
+                        <li><a href="#domains" class="hover:text-white transition-colors">Product & Innovation Hub</a></li>
+                        <li><a href="#domains" class="hover:text-white transition-colors">Leadership Elevation</a></li>
+                        <li><a href="#domains" class="hover:text-white transition-colors">Tech & Data Insights</a></li>
+                        <li><a href="#domains" class="hover:text-white transition-colors">Operations Excellence</a></li>
+                        <li><a href="#domains" class="hover:text-white transition-colors">Digital Enterprise</a></li>
+                        <li><a href="#domains" class="hover:text-white transition-colors">Fintech Innovation Lab</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Navigation -->
+                <div class="space-y-3">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#stats" class="hover:text-white transition-colors">Our Track Record</a></li>
+                        <li><a href="#edge" class="hover:text-white transition-colors">Accredian Edge</a></li>
+                        <li><a href="#cat" class="hover:text-white transition-colors">CAT Framework</a></li>
+                        <li><a href="#how-it-works" class="hover:text-white transition-colors">How It Works</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">Frequently Asked Questions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Detailed Contact & Social Media -->
+                <div class="space-y-4">
+                    <h4 class="text-white font-bold text-xs uppercase tracking-wider">Enterprise Contact</h4>
+                    <div class="space-y-2 text-xs">
+                        <div>
+                            <span class="text-slate-500">Email:</span><br>
+                            <a href="mailto:enterprise@accredian.com" class="text-slate-200 hover:text-white transition-colors font-semibold">enterprise@accredian.com</a>
+                        </div>
+                        <div>
+                            <span class="text-slate-500">Office Address:</span><br>
+                            <span class="text-slate-300">4th Floor, 250, Phase IV, Udyog Vihar, Sector 18, Gurugram, Haryana</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Icons Row -->
+                    <div class="pt-2">
+                        <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">Follow Accredian:</div>
+                        <div class="flex items-center gap-2">
+                            <!-- Facebook -->
+                            <a href="https://facebook.com/accredianlearn" target="_blank" rel="noopener noreferrer" title="Facebook" class="social-icon-btn social-fb w-8 h-8 bg-slate-900 text-slate-300 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="https://www.linkedin.com/company/accredianedu/" target="_blank" rel="noopener noreferrer" title="LinkedIn" class="social-icon-btn social-li w-8 h-8 bg-slate-900 text-slate-300 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+
+                            <!-- Twitter / X -->
+                            <a href="https://twitter.com/accredianedu" target="_blank" rel="noopener noreferrer" title="Twitter / X" class="social-icon-btn social-tw w-8 h-8 bg-slate-900 text-slate-300 flex items-center justify-center">
+                                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/accredian_edu" target="_blank" rel="noopener noreferrer" title="Instagram" class="social-icon-btn social-ig w-8 h-8 bg-slate-900 text-slate-300 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/channel/UCE0L_4ADPU2iyKnDJ0xRzyA" target="_blank" rel="noopener noreferrer" title="YouTube" class="social-icon-btn social-yt w-8 h-8 bg-slate-900 text-slate-300 flex items-center justify-center">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="pt-8 border-t border-slate-900 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-slate-500 text-[11px]">
+                <div>
+                    © 2026 ACCREDIAN ENTERPRISE (A Brand of FullStack Education Pvt Ltd). All Rights Reserved.
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 text-slate-400">
+                    <a href="#contact" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#contact" class="hover:text-white transition-colors">Terms of Service</a>
+                    <span>•</span>
+                    <a href="#contact" class="hover:text-white transition-colors">Enterprise Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enquire Now Modal -->
+    <div id="enquire-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-brand-950/80 backdrop-blur-sm">
+        <div class="bg-white rounded-lg max-w-md w-full p-6 shadow-2xl relative border border-slate-200">
+            
+            <button onclick="closeEnquireModal()" class="absolute top-5 right-5 p-1.5 rounded text-slate-400 hover:text-slate-800 transition-colors focus:outline-none">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <!-- Form Screen -->
+            <div id="modal-form-screen" class="space-y-4">
+                <div>
+                    <span class="text-xs font-bold text-brand-600 uppercase tracking-wider">Enquire Now</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-0.5">
+                        Get Started with Accredian
+                    </h3>
+                    <p class="text-slate-500 text-xs mt-1 leading-relaxed">
+                        Our team will guide you through skill gap analysis and a custom program roadmap.
+                    </p>
+                </div>
+
+                <form id="enquire-booking-form" onsubmit="handleEnquireSubmit(event)" class="space-y-3">
+                    <div class="space-y-1">
+                        <label class="text-xs font-semibold text-slate-700">Full Name *</label>
+                        <input required type="text" id="form-name" placeholder="John Doe" class="w-full px-3 py-2 rounded border border-slate-300 text-xs focus:border-brand-500 focus:outline-none" />
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="space-y-1">
+                            <label class="text-xs font-semibold text-slate-700">Work Email *</label>
+                            <input required type="email" id="form-email" placeholder="john@company.com" class="w-full px-3 py-2 rounded border border-slate-300 text-xs focus:border-brand-500 focus:outline-none" />
+                        </div>
+                        <div class="space-y-1">
+                            <label class="text-xs font-semibold text-slate-700">Phone Number *</label>
+                            <input required type="tel" id="form-phone" placeholder="+1 (555) 000-0000" class="w-full px-3 py-2 rounded border border-slate-300 text-xs focus:border-brand-500 focus:outline-none" />
+                        </div>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label class="text-xs font-semibold text-slate-700">Domain Interest</label>
+                        <select id="form-domain" class="w-full px-3 py-2 rounded border border-slate-300 text-xs focus:border-brand-500 focus:outline-none bg-white">
+                            <option value="Gen-AI Mastery">Gen-AI Mastery</option>
+                            <option value="Product & Innovation Hub">Product & Innovation Hub</option>
+                            <option value="Leadership Elevation">Leadership Elevation</option>
+                            <option value="Tech & Data Insights">Tech & Data Insights</option>
+                            <option value="Operations Excellence">Operations Excellence</option>
+                            <option value="Digital Enterprise">Digital Enterprise</option>
+                            <option value="Fintech Innovation Lab">Fintech Innovation Lab</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="w-full py-3 rounded bg-brand-600 hover:bg-brand-700 text-white font-bold text-xs tracking-wider uppercase transition-all mt-2 sleek-btn">
+                        SUBMIT ENQUIRY
+                    </button>
+                </form>
+            </div>
+
+            <!-- Confirmation Screen -->
+            <div id="modal-success-screen" class="hidden py-6 text-center space-y-4">
+                <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900">Enquiry Received</h3>
+                    <p class="text-slate-600 text-xs mt-1">
+                        Thank you <strong id="success-user-name" class="text-slate-900">Applicant</strong>. Reference: <span id="success-ref-num" class="font-mono text-brand-600 font-bold">#ACC-ENT-89211</span>.
+                    </p>
+                    <p class="text-xs text-slate-500 mt-1">
+                        An Enterprise Advisor will contact you within 1 business day.
+                    </p>
+                </div>
+                <button onclick="closeEnquireModal()" class="px-5 py-2 rounded bg-slate-900 text-white font-bold text-xs hover:bg-slate-800 transition-colors">
+                    Close Window
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Application JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

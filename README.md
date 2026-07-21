@@ -40,7 +40,9 @@ DATABASE_URL=your_supabase_connection_string
 ## Approach Taken
 The primary approach was to understand the page, its content, and the available data and links, then recreate them into a sleek, modern website experience. The design was shaped as a polished enterprise landing page inspired by a modern boilerplate style, with a focus on clarity, visual hierarchy, and user experience.
 
+
 The backend was designed completely by me to store enquiry form data securely and efficiently using Express and Node.js, with Supabase/Postgres as the database layer.
+Other than that i made slight changes in the sections and their visuals
 
 ## AI Usage Explanation
 Antigravity was used to help structure the website content, improve the overall layout and UI flow, The goal was to speed up development while keeping the project aligned with the original Website.

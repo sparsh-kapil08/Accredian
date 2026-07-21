@@ -251,3 +251,4 @@ window.closeEnquireModal = closeEnquireModal;
 window.toggleMobileMenu = toggleMobileMenu;
 window.toggleFaq = toggleFaq;
 window.handleEnquireSubmit = handleEnquireSubmit;
+window.filterFaqs=filterFaqs;
